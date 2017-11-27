@@ -2,20 +2,21 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
+import { black } from '../images/logos'
 
 import './index.css'
 
 const edgeSpace = 1.0875
 const siteMaxWidth = 960
 
-const logos = [
-  'Solid',
-  'Lined',
-  'Dashed',
-  'Dotted'
+const logoTypes = [
+  'solid',
+  'lined',
+  'dashed',
+  'dotted'
 ]
 
-const randomLogo = (color) => `/static/${color}%20${logos[Math.floor(Math.random() * logos.length)]}.svg`
+const randomLogo = () => black[logoTypes[Math.floor(Math.random() * logoTypes.length)]]
 
 const patterns = [
   {
